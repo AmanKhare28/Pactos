@@ -20,13 +20,16 @@ const ProductForm = () => {
 
     try {
       // POST request to the product creation endpoint
-      const response = await axios.post("http://localhost:3000/api/products", {
-        name,
-        description,
-        price: Number(price),
-        imageurl,
-        email,
-      });
+      const response = await axios.post(
+        "https://pactos-2.onrender.com/api/products",
+        {
+          name,
+          description,
+          price: Number(price),
+          imageurl,
+          email,
+        }
+      );
       console.log("Product created:", response.data);
       setSuccess("Product created successfully!");
       // Optionally navigate to another page, e.g., product list or profile page

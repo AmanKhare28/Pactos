@@ -14,7 +14,7 @@ const ProductDetails = () => {
       try {
         console.log("Fetching product with id:", productId);
         const response = await axios.get(
-          `http://localhost:3000/api/products/${productId}`
+          `https://pactos-2.onrender.com/api/products/${productId}`
         );
         setProduct(response.data);
       } catch (err) {

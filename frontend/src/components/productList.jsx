@@ -12,7 +12,9 @@ const ProductList = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/api/products");
+        const response = await axios.get(
+          "https://pactos-2.onrender.com/api/products"
+        );
         setProducts(response.data);
       } catch (err) {
         console.error("Error fetching products:", err);

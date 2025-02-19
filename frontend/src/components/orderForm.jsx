@@ -28,7 +28,7 @@ const OrderForm = () => {
 
     try {
       localStorage.setItem("email", formData.email);
-      await axios.post("http://localhost:3000/api/orders", {
+      await axios.post("https://pactos-2.onrender.com/api/orders", {
         productid: productId,
         buyername: formData.name,
         buyeremail: formData.email,

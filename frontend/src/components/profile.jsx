@@ -17,11 +17,14 @@ const Profile = () => {
     const fetchOrders = async () => {
       try {
         // Use the "params" key to pass query parameters.
-        const response = await axios.get("http://localhost:3000/api/orders", {
-          params: {
-            buyeremail: email,
-          },
-        });
+        const response = await axios.get(
+          "https://pactos-2.onrender.com/api/orders",
+          {
+            params: {
+              buyeremail: email,
+            },
+          }
+        );
         console.log(response);
         setOrders(response.data);
       } catch (err) {
